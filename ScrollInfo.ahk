@@ -8,7 +8,10 @@ typedef struct tagSCROLLINFO {
   UINT nPage;
   int  nPos;
   int  nTrackPos;
-} SCROLLINFO, *LPSCROLLINFO */
+} SCROLLINFO, *LPSCROLLINFO
+
+*/
+
 class ScrollInfo {
     __New() {
         ; Reserves space in computer memory for scrollInf structure with 28 bytes
@@ -29,7 +32,10 @@ class ScrollInfo {
     SIF_PAGE                    The nPage member contains the page size for a proportional scroll bar.
     SIF_POS                     The nPos member contains the scroll box position, which is not updated while the user drags the scroll box.
     SIF_RANGE                   The nMin and nMax members contain the minimum and maximum values for the scrolling range.
-    SIF_TRACKPOS                The nTrackPos member contains the current position of the scroll box while the user is dragging it.                 */
+    SIF_TRACKPOS                The nTrackPos member contains the current position of the scroll box while the user is dragging it.
+    
+    */
+    
     fMask {
         get => NumGet(this.scrollInf, 4, "uint")
         set => NumPut("uint", value, this.scrollInf, 4)

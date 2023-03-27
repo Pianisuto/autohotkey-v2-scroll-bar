@@ -7,7 +7,7 @@ The class provides functionality to create a scrollable GUI with the use of a sc
 
 Example:
 
-``` autohotkey `1`
+``` autohotkey
 M := Gui('+Resize')
 Loop 15 {
     M.Add("Button", "x5 y" 10 + ((A_Index - 1) * 100) " w800 h80", A_Index)
